@@ -1,0 +1,7 @@
+"0","# Load the data set"
+"0","data(""USArrests"")"
+"0","# Remove any missing value (i.e, NA values for not available)"
+"0","# That might be present in the data"
+"0","df <- na.omit(USArrests)"
+"0","# View the firt 6 rows of the data"
+"0","head(df, n = 6)"

@@ -1,0 +1,217 @@
+---
+title: "Hierarchical clustering"
+author: "JJ"
+date: "22 April 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+http://www.sthda.com/english/wiki/print.php?id=237
+There are two standard clustering strategies: partitioning methods (e.g., k-means and pam) and hierarchical clustering
+Hierarchical clustering is an alternative approach to k-means clustering for identifying groups in the dataset. It does not require to pre-specify the number of clusters to be generated. The result is a tree-based representation of the observations which is called a dendrogram. It uses pairwise distance matrix between observations as clustering criteria.
+
+```{r}
+ipak <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+  if (length(new.pkg)) 
+    install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
+
+# usage
+packages <- c("ggplot2", "dataMaid","factoextra","cluster","dendextend")
+ipak(packages)
+```
+
+Hierarchical clustering can be divided into two main types: agglomerative and divisive.
+
+Agglomerative clustering: It’s also known as AGNES (Agglomerative Nesting). It works in a bottom-up manner. That is, each object is initially considered as a single-element cluster (leaf). At each step of the algorithm, the two clusters that are the most similar are combined into a new bigger cluster (nodes). This procedure is iterated until all points are member of just one single big cluster (root) (see figure below). The result is a tree which can be plotted as a dendrogram.
+
+Divisive hierarchical clustering: It’s also known as DIANA (Divise Analysis) and it works in a top-down manner. The algorithm is an inverse order of AGNES. It begins with the root, in which all objects are included in a single cluster. At each step of iteration, the most heterogeneous cluster is divided into two. The process is iterated until all objects are in their own cluster (see figure below).
+
+Note that agglomerative clustering is good at identifying small clusters. Divisive hierarchical clustering is good at identifying large clusters.
+
+A number of different cluster agglomeration methods (i.e, linkage methods) has been developed to answer to this question. The most common types methods are:
+- Maximum or complete linkage clustering: It computes all pairwise dissimilarities between the elements in cluster 1 and the elements in cluster 2, and considers the largest value (i.e., maximum value) of these dissimilarities as the distance between the two clusters. It tends to produce more compact clusters.
+- Minimum or single linkage clustering: It computes all pairwise dissimilarities between the elements in cluster 1 and the elements in cluster 2, and considers the smallest of these dissimilarities as a linkage criterion. It tends to produce long, “loose” clusters.
+- Mean or average linkage clustering: It computes all pairwise dissimilarities between the elements in cluster 1 and the elements in cluster 2, and considers the average of these dissimilarities as the distance between the two clusters.
+- Centroid linkage clustering: It computes the dissimilarity between the centroid for cluster 1 (a mean vector of length p variables) and the centroid for cluster 2.
+- Ward’s minimum variance method: It minimizes the total within-cluster variance. At each step the pair of clusters with minimum between-cluster distance are merged.
+
+```{r}
+# Load the data set
+data("USArrests")
+
+# Remove any missing value (i.e, NA values for not available)
+# That might be present in the data
+df <- na.omit(USArrests)
+
+# View the firt 6 rows of the data
+head(df, n = 6)
+
+#some descriptive statistics
+desc_stats <- data.frame(
+  Min = apply(df, 2, min), # minimum
+  Med = apply(df, 2, median), # median
+  Mean = apply(df, 2, mean), # mean
+  SD = apply(df, 2, sd), # Standard deviation
+  Max = apply(df, 2, max) # Maximum
+  )
+desc_stats <- round(desc_stats, 1)
+head(desc_stats)
+
+
+```
+
+Features must be standardized (i.e., scaled) to make them comparable
+standardization consists of transforming the variables such that they have mean zero and standard deviation one
+```{r}
+df <- scale(df)
+head(df)
+```
+
+Clustering
+hclust() [in stats package] and agnes() [in cluster package] for agglomerative hierarchical clustering (HC)
+diana() [in cluster package] for divisive HC
+Simplified clustering function:
+- hclust(d, method = "complete")
+- d: a dissimilarity structure as produced by the dist() function.
+- method: The agglomeration method to be used. Allowed values is one of “ward.D”, “ward.D2”, “single”, “complete”, “average”, “mcquitty”, “median”   or “centroid”.
+
+```{r}
+
+# Dissimilarity matrix
+d <- dist(df, method = "euclidean")
+# Hierarchical clustering using Ward's method
+res.hc <- hclust(d, method = "ward.D2" )
+# Plot the obtained dendrogram
+plot(res.hc, cex = 0.6, hang = -1)
+
+
+#The R function agnes() [in cluster package] can be also used to compute agglomerative hierarchical clustering. The R function diana() [ in cluster package ] is an example of divisive hierarchical clustering.
+
+# Agglomerative Nesting (Hierarchical Clustering)
+AggNes.hc<-agnes(d, metric = "euclidean", stand = FALSE, method = "average")
+plot(AggNes.hc)
+# DIvisive ANAlysis Clustering
+diana.hc<-diana(d, metric = "euclidean", stand = FALSE)
+plot(diana.hc)
+
+
+# Compute agnes()
+res.agnes <- agnes(df, method = "ward")
+# Agglomerative coefficient
+res.agnes$ac
+## [1] 0.934621
+# Plot the tree using pltree()
+pltree(res.agnes, cex = 0.6, hang = -1,
+       main = "Dendrogram of agnes")
+# plot.hclust()
+plot(as.hclust(res.agnes), cex = 0.6, hang = -1)
+# plot.dendrogram()
+plot(as.dendrogram(res.agnes), cex = 0.6, 
+     horiz = TRUE)
+
+
+
+# Compute diana()
+res.diana <- diana(df)
+# Plot the tree
+pltree(res.diana, cex = 0.6, hang = -1,
+       main = "Dendrogram of diana")
+# Divise coefficient; amount of clustering structure found
+res.diana$dc
+# plot.hclust()
+plot(as.hclust(res.diana), cex = 0.6, hang = -1)
+# plot.dendrogram()
+plot(as.dendrogram(res.diana), cex = 0.6, 
+     horiz = TRUE)
+
+```
+
+In the dendrogram displayed above, each leaf corresponds to one observation. As we move up the tree, observations that are similar to each other are combined into branches, which are themselves fused at a higher height.
+In order to identify sub-groups (i.e. clusters), we can cut the dendrogram at a certain height.
+
+```{r}
+# Dissimilarity matrix
+d <- dist(df, method = "euclidean")
+# Hierarchical clustering using Ward's method
+res.hc <- hclust(d, method = "ward.D2" )
+# Plot the obtained dendrogram
+plot(res.hc, cex = 0.6, hang = -1)
+# Cut tree into 4 groups
+grp <- cutree(res.hc, k = 4)
+# Number of members in each cluster
+table(grp)
+# Get the names for the members of cluster 1
+rownames(df)[grp == 1]
+#It’s also possible to draw the dendrogram with a border around the 4 clusters. 
+#The argument border is used to specify the border colors for the rectangles:
+plot(res.hc, cex = 0.6)
+rect.hclust(res.hc, k = 4, border = 2:5)
+
+#Scatterplot visualization
+library(factoextra)
+fviz_cluster(list(data = df, cluster = grp))
+
+
+# Cut agnes() tree into 4 groups
+cutree(res.agnes, k = 4)
+# Cut diana() tree into 4 groups
+cutree(as.hclust(res.diana), k = 4)
+
+```
+
+The different functions for hierarchical clustering use Euclidean distance measures as default metric. It’s also possible to use correlation-based distance measures. Firstly, pairwise correlation matrix between items is computed using the function cor() which can calculate either “pearson”, “spearman” or “kendall” correlation method. Next, the correlation matrix is converted as a distance matrix and finally clustering can be computed on the resulting distance matrix.
+```{r}
+res.cor <- cor(t(df), method = "pearson")
+d.cor <- as.dist(1 - res.cor)
+plot(hclust(d.cor, method = "ward.D2"), cex = 0.6)
+```
+
+If we want to identify clusters of observations with the same overall profiles regardless of their magnitudes, then we should go with correlation-based distance as a dissimilarity measure.
+If Euclidean distance is chosen, then observations with high values of features will be clustered together. The same holds true for observations with low values of features.
+
+The standard k-means clustering uses the Euclidean distance measure. So, If you want to compute K-means using correlation distance, you just have to normalize the points before clustering.
+
+
+Comparing two dendrograms
+dendextend which contains many functions for comparing two dendrograms, including: dend_diff(), tanglegram(), entanglement(), all.equal.dendrogram(), cor.dendlist()
+```{r}
+#Subset containing 10 rows
+set.seed(123)
+ss <- sample(1:50, 10)
+df <- df[ss,]
+#In the R code below, we’ll start by computing pairwise distance matrix using the function dist(). Next, hierarchical clustering (HC) is computed using two different linkage methods (“average” and “ward.D2”). Finally the results of HC are transformed as dendrograms:
+
+library(dendextend)
+# Compute distance matrix
+res.dist <- dist(df, method = "euclidean")
+
+# Compute 2 hierarchical clusterings
+hc1 <- hclust(res.dist, method = "average")
+hc2 <- hclust(res.dist, method = "ward.D2")
+
+# Create two dendrograms
+dend1 <- as.dendrogram (hc1)
+dend2 <- as.dendrogram (hc2)
+
+# Create a list of dendrograms
+dend_list <- dendlist(dend1, dend2)
+
+#The function tanglegram() plots two dendrograms, side by side, with their labels connected by lines. It can be used for visually comparing two methods of Hierarchical clustering as follow:
+tanglegram(dend1,dend2)
+
+#The quality of the alignment of the two trees can be measured using the function entanglement(). The output of tanglegram() can be customized using many other options as follow:
+tanglegram(dend1, dend2,
+  highlight_distinct_edges = FALSE, # Turn-off dashed lines
+  common_subtrees_color_lines = FALSE, # Turn-off line colors
+  common_subtrees_color_branches = TRUE, # Color common branches 
+  main = paste("entanglement =", round(entanglement(dend_list), 2))
+  )
+
+```
+

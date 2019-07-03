@@ -1,0 +1,559 @@
+"0","ipak(packages)
+"
+"2","also installing the dependencies ‘rematch’, ‘cellranger’, ‘progress’, ‘zip’, ‘readxl’, ‘openxlsx’, ‘carData’, ‘pbkrtest’, ‘rio’, ‘car’, ‘flashClust’, ‘leaps’, ‘scatterplot3d’, ‘ggsci’, ‘cowplot’, ‘ggsignif’, ‘polynom’, ‘flexmix’, ‘prabclus’, ‘diptest’, ‘trimcluster’, ‘TSP’, ‘qap’, ‘gclus’, ‘registry’, ‘plotly’, ‘webshot’, ‘png’, ‘GlobalOptions’, ‘shape’, ‘abind’, ‘FactoMineR’, ‘ggpubr’, ‘ggrepel’, ‘ade4’, ‘ca’, ‘igraph’, ‘mclust’, ‘fpc’, ‘seriation’, ‘ape’, ‘profdpm’, ‘microbenchmark’, ‘heatmaply’, ‘d3heatmap’, ‘dynamicTreeCut’, ‘pvclust’, ‘corrplot’, ‘DendSer’, ‘circlize’
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/rematch_1.0.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 16127 bytes (15 KB)
+"
+"2","downloaded 15 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/cellranger_1.1.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 104813 bytes (102 KB)
+"
+"2","downloaded 102 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/progress_1.2.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 82188 bytes (80 KB)
+"
+"2","downloaded 80 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/zip_2.0.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 439984 bytes (429 KB)
+"
+"2","downloaded 429 KB
+
+"
+"2","Content type 'application/zip'"
+"2"," length 1529475 bytes (1.5 MB)
+"
+"2","downloaded 1.5 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/openxlsx_4.1.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 2561869 bytes (2.4 MB)
+"
+"2","downloaded 2.4 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/carData_3.0-2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1817818 bytes (1.7 MB)
+"
+"2","downloaded 1.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/pbkrtest_0.4-7.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 263000 bytes (256 KB)
+"
+"2","downloaded 256 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/rio_0.5.16.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 505386 bytes (493 KB)
+"
+"2","downloaded 493 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/car_3.0-2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1493749 bytes (1.4 MB)
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/flashClust_1.01-2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 290783 bytes (283 KB)
+"
+"2","downloaded 283 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/leaps_3.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 361400 bytes (352 KB)
+"
+"2","downloaded 352 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/scatterplot3d_0.3-41.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 338370 bytes (330 KB)
+"
+"2","downloaded 330 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ggsci_2.9.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 2979145 bytes (2.8 MB)
+"
+"2","Content type 'application/zip'"
+"2"," length 2213824 bytes (2.1 MB)
+"
+"2","downloaded 2.1 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ggsignif_0.5.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 79393 bytes (77 KB)
+"
+"2","downloaded 77 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/polynom_1.4-0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 313137 bytes (305 KB)
+"
+"2","downloaded 305 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/flexmix_2.3-15.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1731300 bytes (1.7 MB)
+"
+"2","downloaded 1.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/prabclus_2.2-7.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 377369 bytes (368 KB)
+"
+"2","downloaded 368 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/diptest_0.75-7.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 364290 bytes (355 KB)
+"
+"2","downloaded 355 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/trimcluster_0.1-2.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 21644 bytes (21 KB)
+"
+"2","downloaded 21 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/TSP_1.1-6.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 842071 bytes (822 KB)
+"
+"2","downloaded 822 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/qap_0.1-1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 537761 bytes (525 KB)
+"
+"2","downloaded 525 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/gclus_1.3.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 416639 bytes (406 KB)
+"
+"2","downloaded 406 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/registry_0.5-1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 197132 bytes (192 KB)
+"
+"2","downloaded 192 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/plotly_4.9.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 2849250 bytes (2.7 MB)
+"
+"2","downloaded 2.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/webshot_0.5.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 141903 bytes (138 KB)
+"
+"2","downloaded 138 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/png_0.1-7.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 292813 bytes (285 KB)
+"
+"2","downloaded 285 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/GlobalOptions_0.1.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 120138 bytes (117 KB)
+"
+"2","downloaded 117 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/shape_1.4.4.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 793429 bytes (774 KB)
+"
+"2","downloaded 774 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/abind_1.4-5.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 63925 bytes (62 KB)
+"
+"2","downloaded 62 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/FactoMineR_1.41.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 3638592 bytes (3.5 MB)
+"
+"2","downloaded 3.5 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ggpubr_0.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1755681 bytes (1.7 MB)
+"
+"2","downloaded 1.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ggrepel_0.8.0.zip'
+"
+"2","downloaded 817 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ade4_1.7-13.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 5226554 bytes (5.0 MB)
+"
+"2","downloaded 5.0 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ca_0.71.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 245419 bytes (239 KB)
+"
+"2","downloaded 239 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/igraph_1.2.4.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 9182530 bytes (8.8 MB)
+"
+"2","downloaded 8.8 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/mclust_5.4.3.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 4415766 bytes (4.2 MB)
+"
+"2","downloaded 4.2 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/fpc_2.1-11.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 666751 bytes (651 KB)
+"
+"2","downloaded 651 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/seriation_1.2-3.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1175641 bytes (1.1 MB)
+"
+"2","downloaded 1.1 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/ape_5.3.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 2835304 bytes (2.7 MB)
+"
+"2","downloaded 2.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/profdpm_3.3.zip'
+"
+"2","downloaded 448 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/microbenchmark_1.4-6.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 70556 bytes (68 KB)
+"
+"2","downloaded 68 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/heatmaply_0.15.2.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 1753731 bytes (1.7 MB)
+"
+"2","downloaded 1.7 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/d3heatmap_0.6.1.2.zip'
+"
+"2","downloaded 493 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/dynamicTreeCut_1.63-1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 92613 bytes (90 KB)
+"
+"2","downloaded 90 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/pvclust_2.0-0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 180523 bytes (176 KB)
+"
+"2","downloaded 176 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/corrplot_0.84.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 5450582 bytes (5.2 MB)
+"
+"2","downloaded 5.2 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/DendSer_1.0.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 76589 bytes (74 KB)
+"
+"2","downloaded 74 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/circlize_0.4.6.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 3044458 bytes (2.9 MB)
+"
+"2","downloaded 2.9 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.6/factoextra_1.0.5.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 412051 bytes (402 KB)
+"
+"2","Content type 'application/zip'"
+"2"," length 2099281 bytes (2.0 MB)
+"
+"2","downloaded 2.0 MB
+
+"
+"1","package â€˜cellrangerâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜progressâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜zipâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜readxlâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜openxlsxâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜carDataâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜pbkrtestâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜rioâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜carâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜flashClustâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜leapsâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜scatterplot3dâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜ggsciâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜cowplotâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜ggsignifâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜flexmixâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜prabclusâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜diptestâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜trimclusterâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜TSPâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜qapâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜gclusâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜registryâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜plotlyâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜webshotâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜GlobalOptionsâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜abindâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜ggpubrâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜ggrepelâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜ade4â€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜igraphâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜mclustâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜fpcâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜seriationâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜apeâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜microbenchmarkâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜heatmaplyâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜d3heatmapâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜dynamicTreeCutâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜pvclustâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜corrplotâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜DendSerâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜factoextraâ€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜dendextendâ€™ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\Umbhau\AppData\Local\Temp\Rtmpo9mT2e\downloaded_packages"
+"1",""
+"1","
+"
+"2","Loading required package: ggplot2
+"
+"2","Registered S3 methods overwritten by 'ggplot2':
+  method         from 
+  [.quosures     rlang
+  c.quosures     rlang
+  print.quosures rlang
+"
+"2","Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+"
+"2","Loading required package: dataMaid
+"
+"2","Registered S3 methods overwritten by 'htmltools':
+  method               from         
+  print.html           tools:rstudio
+  print.shiny.tag      tools:rstudio
+  print.shiny.tag.list tools:rstudio
+"
+"2","Loading required package: factoextra
+"
+"2","Welcome! Related Books: `Practical Guide To Cluster Analysis in R` at https://goo.gl/13EFCZ
+"
+"2","Loading required package: cluster
+"
+"2","Loading required package: dendextend
+"
+"2","
+---------------------
+Welcome to dendextend version 1.10.0
+Type citation('dendextend') for how to cite the package.
+
+Type browseVignettes(package = 'dendextend') for the package vignette.
+The github page is: https://github.com/talgalili/dendextend/
+
+Suggestions and bug-reports can be submitted at: https://github.com/talgalili/dendextend/issues
+Or contact: <tal.galili@gmail.com>
+
+	To suppress this message use:  suppressPackageStartupMessages(library(dendextend))
+---------------------
+
+"
+"2","
+Attaching package: ‘dendextend’
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    cutree
+
+"
+"1","   ggplot2 "
+"1","  dataMaid "
+"1","factoextra "
+"1","   cluster "
+"1","dendextend "
+"1","
+"
+"1","      TRUE "
+"1","      TRUE "
+"1","      TRUE "
+"1","      TRUE "
+"1","      TRUE "
+"1","
+"

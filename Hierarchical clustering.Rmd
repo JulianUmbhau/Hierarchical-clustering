@@ -22,7 +22,7 @@ ipak <- function(pkg){
 }
 
 # usage
-packages <- c("ggplot2", "dataMaid","factoextra","cluster","dendextend")
+packages <- c("ggplot2", "dataMaid","factoextra","cluster","dendextend","reshape2")
 ipak(packages)
 ```
 
@@ -71,6 +71,21 @@ standardization consists of transforming the variables such that they have mean 
 ```{r}
 df <- scale(df)
 head(df)
+str(longData)
+
+longData<-melt(df)
+longData<-longData[longData$value!=0,]
+ggplot(longData,aes(Var1,Var2))+
+  geom_point()
+
+ggplot(longData, aes(x = Var2, y = Var1)) + 
+  geom_raster(aes(fill=value)) + 
+  scale_fill_gradient(low="grey90", high="red") +
+  labs(x="letters", y="LETTERS", title="Matrix") +
+  theme_bw() + theme(axis.text.x=element_text(size=9, angle=0, vjust=0.3),
+                     axis.text.y=element_text(size=9),
+                     plot.title=element_text(size=11))
+
 ```
 
 Clustering
